@@ -1,0 +1,30 @@
+.actions {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  height: 50%;
+  width: 100%;
+
+  @media (max-width: 426px) {
+    flex-direction: row;
+  }
+
+  .selectAction {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+
+    span {
+      font-size: 1.5rem;
+    }
+
+    @media (max-width: 601px) {
+      gap: 0;
+
+      span {
+        font-size: 0;
+      }
+    }
+  }
+}

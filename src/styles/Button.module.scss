@@ -1,0 +1,38 @@
+.container {
+  button {
+    border-radius: 0.5rem;
+    font-weight: 600;
+    background: var(--primary);
+    color: var(--title);
+    padding: 0.5rem 0.5rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border: 0;
+
+    transition: 0.2s;
+
+    svg {
+      stroke: var(--title);
+      width: 3rem;
+      height: 3rem;
+    }
+
+    &.outlined {
+      background: transparent;
+      border: 1px solid var(--primary);
+
+      svg {
+        stroke: var(--primary);
+        width: 3rem;
+        height: 3rem;
+      }
+    }
+
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+}
