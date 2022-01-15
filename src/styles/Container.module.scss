@@ -7,8 +7,8 @@
 
   overflow: hidden;
   // Esconder Scroll
-  ::-webkit-scrollbar { 
-    display: none; 
+  ::-webkit-scrollbar {
+    display: none;
   }
 
   @media (max-width: 769px) {
@@ -56,8 +56,10 @@
     @media (max-width: 426px) {
       background: var(--bg);
 
-      position: absolute;
+      position: fixed;
       bottom: 0;
+      left: 0;
+      z-index: 2;
 
       width: 100%;
       padding: 1vh 10vw 1vh 10vw;
