@@ -8,23 +8,24 @@ export default function AboutMe() {
       <div className={styles.AboutMe}>
         <span className={styles.title}>Sobre mim</span>
         <p>
-          Oi, meu nome é Leandro, mas me chamam de Leh; tenho 24 anos e sou de
-          nacionalidade chilena felizmente casado com brasileira, consequentemente
-          falo espanhol e português nativo.
+          Olá, meu nome é Leandro, tenho 24 anos, sou de
+          nacionalidade chilena e felizmente casado com uma brasileira.
+          Passei minha vida morando entre o Brasil e o Chile, consequentemente
+          falo espanhol e português nativos, e no momento estou aprendendo a falar inglês.
         </p>
         <p>
-          Me acabo de formar em Engenharia da Computação sendo 4 anos muito
-          desafiantes em minha vida; em paralelo fiz um desafio pessoal de 1
-          commit por dia no Github no ano 2021 e eu consegui!
+          Em janeiro de 2022 terminei a faculdade de Engenharia da Computação, foram 4 anos de muito aprendizado.
+          Em paralelo com os estudos fiz um desafio pessoal, que consistia em realizar pelo menos um
+          commit por dia no Github no ano de 2021, e contentemente o realizei com êxito.
         </p>
         <p>
-          Espero que possamos trabalhar juntos para juntos evoluir dentro de nossos
-          propositos.
+          Espero que possamos trabalhar juntos para evoluir e conquistar bons resultados.
+
         </p>
       </div>
 
       <div className={styles.listObjetives} >
-        <span className={styles.objetive}> <Globe /> Aprender falar inglês</span>
+        <span className={styles.objetive}> <Globe /> Aprender a falar inglês</span>
         <span className={styles.objetive}> <Code /> Aprender Python.</span>
         <span className={styles.objetive}> <Coffee /> Ensinar outros desenvolvedores.</span>
         <span className={styles.objetive}> <Monitor /> Conseguir trabalho.</span>
@@ -36,7 +37,7 @@ export default function AboutMe() {
         </div>
 
         <p>
-          O Engenheiro de Computação da Universidad Tecnológica de Chile INACAP,
+          O Engenheiro de Computação da Universidad Tecnológica de Chile (INACAP),
           é formado para gerenciar projetos de tecnologia da informação, bem como
           projetar e desenvolver soluções informáticas integradas para atender às
           necessidades de negócios atuais e futuras, trabalhando de forma colaborativa,
