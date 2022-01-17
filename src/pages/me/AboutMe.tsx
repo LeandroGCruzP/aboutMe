@@ -24,11 +24,24 @@ export default function AboutMe() {
         </p>
       </div>
 
-      <div className={styles.listObjetives} >
-        <span className={styles.objetive}> <Globe /> Aprender a falar inglês</span>
-        <span className={styles.objetive}> <Code /> Aprender Python.</span>
-        <span className={styles.objetive}> <Coffee /> Ensinar outros desenvolvedores.</span>
-        <span className={styles.objetive}> <Monitor /> Conseguir trabalho.</span>
+      <div className={styles.titleObjetives}>
+        <span className={styles.titleSubSection}>Objetivos 2022</span>
+      </div>
+
+      <div className={styles.listObjetives}>
+        <span className={styles.objetive}> <Globe /> Aprender a falar inglês de forma fluente.</span>
+        <span className={styles.objetive}> <Code /> Aprender Python e Power BI.</span>
+        <span className={styles.objetive}> <Monitor /> Conseguir meu primeiro trabalho em programação.</span>
+      </div>
+
+      <div className={styles.titleObjetives}>
+        <span className={styles.titleSubSection}>Habilidades e tecnologias que trabalho</span>
+      </div>
+
+      <div className={styles.listObjetives}>
+        <span className={styles.objetive}> <Globe /> Português e espanhol nativo.</span>
+        <span className={styles.objetive}> <Code /> React, React Native, Node, TypeScript, CSS3, HTML5, SaaS, MySQL, TypeORM, Git, entre outros.</span>
+        <span className={styles.objetive}> <Coffee /> Metodologia Scrum, IEEE 830, PMBOK, entre outros.</span>
       </div>
 
       <div className={styles.sectionProfile} >
@@ -98,8 +111,6 @@ export default function AboutMe() {
           (SFIA: BPRE, 5; STPL, 5)
         </p>
       </div>
-
-
     </div>
   )
 }

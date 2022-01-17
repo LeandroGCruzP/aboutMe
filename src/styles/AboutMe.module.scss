@@ -20,6 +20,17 @@
   }
 }
 
+.titleObjetives {
+  display: flex;
+    justify-content: center;
+
+    .titleSubSection {
+      font-weight: 700;
+
+      color: var(--title);
+    }
+}
+
 .listObjetives {
   display: flex;
   flex-direction: column;
