@@ -1,10 +1,17 @@
 .container {
+  display: flex;
+  justify-content: center;
+
+  height: 100%;
+  width: 100%;
+}
+
+.containerGrid {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 2rem;
 
-  height: 100%;
-  width: 100%;
+  padding-bottom: 2vh;
 
   @media (max-width: 1520px) {
     display: flex;
@@ -13,16 +20,10 @@
     align-items: center;
   }
 
-  @media (max-width: 426px) {
-    padding-bottom: 12vh;
-  }
-}
-
-.containerGrid {
-  padding-bottom: 2vh;
-
-  @media (max-width: 426px) {
-    padding-bottom: 12vh;
+  @media(max-width: 426px) {
+    div:last-child {
+      padding-bottom: 11vh;
+    }
   }
 }
 
@@ -44,9 +45,16 @@
 
   .title {
     color: var(--title);
+    font-weight: 600;
+  }
+
+  img {
+    border-radius: 10px;
   }
 
   p {
     color: var(--subtitle);
   }
+
+  padding-bottom: 1rem;
 }
