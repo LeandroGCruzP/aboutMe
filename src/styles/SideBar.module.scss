@@ -6,8 +6,30 @@
 
   @media (max-width: 426px) {
     flex-direction: row;
-    
+
     width: 100%;
+    gap: 2rem;
+
+    button {
+      svg {
+        height: 40px;
+        width: 40px;
+      }
+    }
+  }
+
+  @media (max-width: 375px) {
+    flex-direction: row;
+
+    width: 100%;
+    gap: 1.25rem;
+
+    button {
+      svg {
+        height: 35px;
+        width: 35px;
+      }
+    }
   }
 
   .selectAction {

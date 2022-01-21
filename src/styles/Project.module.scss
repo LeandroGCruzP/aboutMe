@@ -1,0 +1,52 @@
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+
+  height: 100%;
+  width: 100%;
+
+  @media (max-width: 1520px) {
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+  }
+
+  @media (max-width: 426px) {
+    padding-bottom: 12vh;
+  }
+}
+
+.containerGrid {
+  padding-bottom: 2vh;
+
+  @media (max-width: 426px) {
+    padding-bottom: 12vh;
+  }
+}
+
+.grid {
+  display: flex;
+  flex-direction: column;
+  width: 25rem;
+
+  gap: 1rem;
+
+  @media (max-width: 520px) {
+    width: 20rem;
+  }
+
+  > div {
+    display: flex;
+    justify-content: center;
+  }
+
+  .title {
+    color: var(--title);
+  }
+
+  p {
+    color: var(--subtitle);
+  }
+}

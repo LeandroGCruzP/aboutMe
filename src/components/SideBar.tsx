@@ -38,7 +38,7 @@ export function SideBar() {
         <span>Contato</span>
       </div>
 
-      {/* <div className={styles.selectAction}>
+      <div className={styles.selectAction}>
         <Link href={`/me/Project`} passHref>
           <Button outline={false}>
             <Code />
@@ -46,7 +46,7 @@ export function SideBar() {
         </Link>
 
         <span>Projetos</span>
-      </div> */}
+      </div>
     </div>
   )
 }
