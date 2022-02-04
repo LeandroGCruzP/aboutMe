@@ -17,7 +17,7 @@ export default function Contact() {
 
         <div>
           <span>Whatsapp: +55 (42) 99825-6197</span>
-          <Button>
+          <Button outline={true} >
             <a target="_blank" rel="noopener noreferrer" href={urlAPIWhatsapp}>
               Contato
             </a>
@@ -31,7 +31,7 @@ export default function Contact() {
 
         <div>
           <span>linkedin.com/in/leandrogcruzp</span>
-          <Button>
+          <Button outline={true} >
             <a target="_blank" rel="noopener noreferrer" href={urlAPILinkedin}>
               Contato
             </a>
@@ -44,7 +44,7 @@ export default function Contact() {
 
         <div>
           <span>leandro.programmer@hotmail.com</span>
-          <Button>
+          <Button outline={true} >
             <a target="_blank" rel="noopener noreferrer" href={urlAPIHotmail}>
               Contato
             </a>

@@ -12,11 +12,11 @@
     line-height: 4rem;
     font-weight: 700;
 
-    color: var(--title);
+    color: var(--t);
   }
 
   p {
-    color: var(--title);
+    color: var(--t);
   }
 }
 
@@ -27,7 +27,7 @@
     .titleSubSection {
       font-weight: 700;
 
-      color: var(--title);
+      color: var(--t);
     }
 }
 
@@ -36,14 +36,14 @@
   flex-direction: column;
   margin-left: 5vw;
   padding-left: 1rem;
-  border-left: 3px solid var(--primary);
+  border-left: 3px solid var(--t);
 
   .objetive {
     display: flex;
     align-items: center;
     gap: 0.5rem;
 
-    color: var(--title);
+    color: var(--t);
 
     svg {
       width: 1.25rem;
@@ -72,13 +72,13 @@
       line-height: 2.5rem;
       font-weight: 700;
 
-      color: var(--title);
+      color: var(--t);
     }
 
     .titleSubSection {
       font-weight: 700;
 
-      color: var(--title);
+      color: var(--t);
     }
   }
 

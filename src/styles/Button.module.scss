@@ -2,9 +2,9 @@
   button {
     border-radius: 10px;
     font-weight: 600;
-    background: var(--primary);
-    color: var(--title);
-    padding: 0.5rem 0.5rem;
+    background: var(--bg);
+    color: var(--t);
+    padding: 0.5rem 0.75rem;
 
     display: flex;
     justify-content: center;
@@ -15,23 +15,23 @@
     transition: 0.2s;
 
     svg {
-      stroke: var(--title);
-      width: 3rem;
-      height: 3rem;
+      stroke: var(--t);
+      width: 2.5rem;
+      height: 2.5rem;
     }
 
     a {
       font-weight: 600;
       font-size: 0.875rem;
-      color: var(--title);
+      color: var(--t);
     }
 
     &.outlined {
       background: transparent;
-      border: 1px solid var(--primary);
+      border: 1px solid var(--t);
 
       svg {
-        stroke: var(--primary);
+        stroke: var(--t);
         width: 3rem;
         height: 3rem;
       }

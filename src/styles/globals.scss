@@ -5,13 +5,11 @@
 }
 
 :root {
-  --white: #fff;
-  --black: #000;
-  --bg: #0d1117;
-  --title: #c9d1d9;
-  --subtitle: #8b949e;
+  --bg: #000;
+  --bg2: #191C1B;
 
-  --primary: #05224e;
+  --t: #fff;
+  --st: #aaaaaa;
 }
 
 body {
@@ -26,7 +24,7 @@ a {
   font-weight: 400;
   font-size: 1rem;
   line-height: 1.4rem;
-  color: var(--title)
+  color: var(--t)
 }
 
 button {
