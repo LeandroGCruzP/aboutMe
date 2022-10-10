@@ -8,18 +8,24 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@styled-icons/feather": "^10.34.0",
-    "next": "12.0.8",
-    "react": "17.0.2",
-    "react-dom": "17.0.2",
-    "styled-components": "^5.3.3"
+    "@chakra-ui/react": "^2.3.5",
+    "@emotion/react": "^11.10.4",
+    "@emotion/styled": "^11.10.4",
+    "@styled-icons/feather": "^10.46.0",
+    "framer-motion": "^7.5.3",
+    "next": "12.3.1",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "react-flagkit": "^2.0.4",
+    "react-icons": "^4.4.0",
+    "styled-components": "^5.3.6"
   },
   "devDependencies": {
-    "@types/node": "17.0.8",
-    "@types/react": "17.0.38",
-    "eslint": "8.6.0",
-    "eslint-config-next": "12.0.8",
-    "sass": "^1.48.0",
-    "typescript": "4.5.4"
+    "@types/node": "18.8.4",
+    "@types/react": "18.0.21",
+    "eslint": "8.25.0",
+    "eslint-config-next": "12.3.1",
+    "sass": "^1.55.0",
+    "typescript": "4.8.4"
   }
 }
