@@ -2,8 +2,8 @@ import { ChakraProvider, Flex } from '@chakra-ui/react'
 import type { AppProps } from 'next/app'
 import { useRouter } from 'next/router'
 
-import { Shared } from '../shared'
-import { theme } from '../styles/theme'
+import { Shared } from '@/shared/index'
+import { theme } from '@/styles/theme'
 
 function MyApp({ Component, pageProps }: AppProps) {
   const router = useRouter()

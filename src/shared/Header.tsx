@@ -3,7 +3,7 @@ import Link from 'next/link'
 import { useRouter } from 'next/router'
 import Flag from 'react-flagkit'
 
-import { Icons } from '../assets'
+import { Icons } from '@/assets/index'
 
 export function Header() {
   const { asPath } = useRouter()

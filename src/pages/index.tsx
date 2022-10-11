@@ -2,7 +2,7 @@ import { Flex, Grid, GridItem, keyframes, Text, useBreakpointValue } from '@chak
 import Image from 'next/image'
 import Link from 'next/link'
 
-import { Icons } from '../assets'
+import { Icons } from '@/assets/index'
 
 export default function Home() {
   const animationKeyFrames = keyframes`
