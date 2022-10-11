@@ -1,4 +1,4 @@
-import { Flex, HStack, Text } from '@chakra-ui/react'
+import { Flex, HStack, Link as ChakraLink, Text } from '@chakra-ui/react'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
 import { Icons } from '../../assets/icons'
@@ -26,44 +26,35 @@ export function Header() {
         <HStack spacing={8}>
           <Text fontWeight="medium" fontSize={20} cursor='pointer'>
             <Link href='/'>
-              <Flex justify='center'>
-                <Flex
-                  justify='center'
-                  borderBottom={asPath === '/' ? '3px solid #FF0000' : ''}
-                  transition='0.2s filter'
-                  _hover={{ filter: 'brightness(1.2)' }}
-                >
-                  Home
-                </Flex>
-              </Flex>
+              <ChakraLink
+                borderBottom={asPath === '/' ? '3px solid #FF0000' : ''}
+                transition='0.2s filter'
+                _hover={{ filter: 'brightness(1.2)' }}
+              >
+                Home
+              </ChakraLink>
             </Link>
           </Text>
           <Text fontWeight="medium" fontSize={20} cursor='pointer'>
             <Link href='/about'>
-              <Flex justify='center'>
-                <Flex
-                  justify='center'
-                  borderBottom={asPath === '/about' ? '3px solid #FF0000' : ''}
-                  transition='0.2s filter'
-                  _hover={{ filter: 'brightness(1.2)' }}
-                >
-                  About
-                </Flex>
-              </Flex>
+              <ChakraLink
+                borderBottom={asPath === '/about' ? '3px solid #FF0000' : ''}
+                transition='0.2s filter'
+                _hover={{ filter: 'brightness(1.2)' }}
+              >
+                About
+              </ChakraLink>
             </Link>
           </Text>
           <Text fontWeight="medium" fontSize={20} cursor='pointer'>
             <Link href='/projects'>
-              <Flex justify='center'>
-                <Flex
-                  justify='center'
-                  borderBottom={asPath === '/projects' ? '3px solid #FF0000' : ''}
-                  transition='0.2s filter'
-                  _hover={{ filter: 'brightness(1.2)' }}
-                >
-                  Project
-                </Flex>
-              </Flex>
+              <ChakraLink
+                borderBottom={asPath === '/projects' ? '3px solid #FF0000' : ''}
+                transition='0.2s filter'
+                _hover={{ filter: 'brightness(1.2)' }}
+              >
+                Projects
+              </ChakraLink>
             </Link>
           </Text>
         </HStack>
