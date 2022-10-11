@@ -1,7 +1,8 @@
 import { Flex, Grid, GridItem, Text, useBreakpointValue } from '@chakra-ui/react'
 import Image from 'next/image'
 import Link from 'next/link'
-import { Icons } from '../assets/icons'
+
+import { Icons } from '../assets'
 
 export default function About() {
   const phone = '+5542998256197'

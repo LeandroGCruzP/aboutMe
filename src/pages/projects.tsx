@@ -1,15 +1,7 @@
-import {
-  Box,
-  Flex,
-  Grid,
-  GridItem,
-  Image,
-  SimpleGrid,
-  Text,
-  useBreakpointValue
-} from '@chakra-ui/react'
+import { Box, Flex, Grid, GridItem, Image, SimpleGrid, Text, useBreakpointValue } from '@chakra-ui/react'
 import Link from 'next/link'
-import { Icons } from '../assets/icons'
+
+import { Icons } from '../assets'
 
 export default function Projects() {
   const isPhoneVersion = useBreakpointValue({ base: true, md: false })
