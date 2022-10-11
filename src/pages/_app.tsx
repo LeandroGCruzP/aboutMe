@@ -12,10 +12,10 @@ function MyApp({ Component, pageProps }: AppProps) {
       <Flex
         h="100vh"
         w="100vw"
-        bg="#1C1C1C"
         bgImage={router.pathname === '/' ? 'url(/Background.svg)' : ''}
         bgPosition="center"
         bgRepeat="repeat"
+        overflow="hidden"
       >
         <Flex w="95%" h="100%" marginX="auto" flexDir="column">
           {router.pathname === '/' && <Header />}

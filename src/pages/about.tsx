@@ -1,10 +1,18 @@
-import { Flex, Grid, GridItem, Image, Text } from '@chakra-ui/react'
+import {
+  Flex,
+  Grid,
+  GridItem,
+  Image,
+  Text,
+  useBreakpointValue
+} from '@chakra-ui/react'
 import Link from 'next/link'
 import { Icons } from '../assets/icons'
 
 export default function About() {
   const phone = '+5542998256197'
   const urlAPIWhatsapp = `https://api.whatsapp.com/send?phone=${phone}`
+  const isPhoneVersion = useBreakpointValue({ base: true, md: false })
 
   return (
     <Flex w="100%" h="100%" overflowX="hidden">
@@ -19,19 +27,25 @@ export default function About() {
             width: 12
           },
           '::-webkit-scrollbar-track': {
-            background: '#C9C9C9',
+            background: '#222222',
             borderTopRightRadius: 5,
             borderBottomRightRadius: 5
           },
           '::-webkit-scrollbar-thumb': {
-            backgroundColor: '#353646',
+            backgroundColor: '#131313',
             borderTopRightRadius: 5,
             borderBottomRightRadius: 5
           }
         }}
       >
         <GridItem rowSpan={3}>
-          <Flex gap={4} h="100%" flexDir="column" justifyContent="center">
+          <Flex
+            gap={4}
+            h="100%"
+            flexDir="column"
+            justifyContent={isPhoneVersion ? 'flex-start' : 'center'}
+            pt={isPhoneVersion ? '25px' : 0}
+          >
             <Flex cursor="pointer" maxW="-webkit-max-content">
               <Link
                 href="https://www.linkedin.com/in/leandrogcruzp/"

@@ -31,7 +31,13 @@ export function Main() {
       alignContent="center"
     >
       <GridItem rowSpan={2}>
-        <Flex gap={4} h="100%" flexDir="column" justifyContent="center">
+        <Flex
+          gap={4}
+          h="100%"
+          flexDir="column"
+          justifyContent={isPhoneVersion ? 'flex-start' : 'center'}
+          pt={isPhoneVersion ? '25px' : 0}
+        >
           <Flex cursor="pointer" maxW="-webkit-max-content">
             <Link
               href="https://www.linkedin.com/in/leandrogcruzp/"

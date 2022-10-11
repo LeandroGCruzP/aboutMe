@@ -18,13 +18,34 @@ export default function Projects() {
 
   return (
     <Flex w="100%" h="100%" overflowX="hidden">
-      <Grid templateColumns="50px 1fr" w="100%" h="100%">
+      <Grid
+        templateColumns="50px 1fr"
+        w="100%"
+        h="100%"
+        overflowY="auto"
+        css={{
+          '::-webkit-scrollbar': {
+            width: 12
+          },
+          '::-webkit-scrollbar-track': {
+            background: '#222222',
+            borderTopRightRadius: 5,
+            borderBottomRightRadius: 5
+          },
+          '::-webkit-scrollbar-thumb': {
+            backgroundColor: '#131313',
+            borderTopRightRadius: 5,
+            borderBottomRightRadius: 5
+          }
+        }}
+      >
         <GridItem>
           <Flex
             gap={4}
             h="100%"
             flexDir="column"
             justifyContent={isPhoneVersion ? 'flex-start' : 'center'}
+            pt={isPhoneVersion ? '25px' : 0}
           >
             <Flex cursor="pointer" maxW="-webkit-max-content">
               <Link
