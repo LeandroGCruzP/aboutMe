@@ -1,19 +1,13 @@
+import { ChakraProvider } from '@chakra-ui/react'
 import type { AppProps } from 'next/app'
 
-import { SideBar } from '../components/SideBar'
-import '../styles/globals.scss'
-import styles from '../styles/Container.module.scss'
+import { theme } from '../styles/theme'
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
-    <div className={styles.container}>
-      <div className={styles.containerLeft}>
-        <Component {...pageProps} />
-      </div>
-      <div className={styles.containerRight}>
-        <SideBar />
-      </div>
-    </div>
+    <ChakraProvider theme={theme}>
+      <Component {...pageProps} />
+    </ChakraProvider>
   )
 }
 
