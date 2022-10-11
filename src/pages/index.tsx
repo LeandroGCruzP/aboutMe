@@ -4,18 +4,20 @@ import Link from 'next/link'
 
 import { Icons } from '@/assets/index'
 
+const phone = '+5542998256197'
+const urlAPIWhatsapp = `https://api.whatsapp.com/send?phone=${phone}`
+const urlLinkedin = 'https://www.linkedin.com/in/leandrogcruzp/'
+const urlGithub = 'https://github.com/LeandroGCruzP'
+const urlInstagram = 'https://www.instagram.com/leh_gcruz/'
+
 export default function Home() {
   const animationKeyFrames = keyframes`
   0% { background-position: 0% }
   100% { background-position: 400% }
 `
 
-const isPhoneVersion = useBreakpointValue({ base: true, md: false })
-
 const animation = `${animationKeyFrames} 10s linear infinite`
-
-const phone = '+5542998256197'
-const urlAPIWhatsapp = `https://api.whatsapp.com/send?phone=${phone}`
+const isPhoneVersion = useBreakpointValue({ base: true, md: false })
 
 return (
   <Grid
@@ -33,29 +35,25 @@ return (
         pt={isPhoneVersion ? '25px' : 0}
       >
         <Flex cursor="pointer" maxW="-webkit-max-content">
-          <Link
-            href="https://www.linkedin.com/in/leandrogcruzp/"
-            target="_blank"
-          >
+          <Link href={urlLinkedin} target="_blank">
             <Icons.Linkedin size={30} />
           </Link>
         </Flex>
+
         <Flex cursor="pointer" maxW="-webkit-max-content">
-          <Link href="https://github.com/LeandroGCruzP" target="_blank">
+          <Link href={urlGithub} target="_blank">
             <Icons.Github size={30} />
           </Link>
         </Flex>
+
         <Flex cursor="pointer" maxW="-webkit-max-content">
-          <Link href="https://www.instagram.com/leh_gcruz/" target="_blank">
+          <Link href={urlInstagram} target="_blank">
             <Icons.Instagram size={30} />
           </Link>
         </Flex>
+
         <Flex cursor="pointer" maxW="-webkit-max-content">
-          <Link
-            rel="noopener noreferrer"
-            href={urlAPIWhatsapp}
-            target="_blank"
-          >
+          <Link href={urlAPIWhatsapp} target="_blank" rel="noopener noreferrer">
             <Icons.Whatsapp size={30} />
           </Link>
         </Flex>

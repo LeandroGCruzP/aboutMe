@@ -4,9 +4,11 @@ import { useRouter } from 'next/router'
 import Flag from 'react-flagkit'
 
 import { Icons } from '@/assets/index'
+import { useKBar } from 'kbar'
 
 export function Header() {
   const { asPath } = useRouter()
+  const { query } = useKBar()
   const isPhoneVersion = useBreakpointValue({ base: true, md: false })
 
   return (
@@ -63,20 +65,22 @@ export function Header() {
       </Flex>
 
       <Menu matchWidth autoSelect={false}>
-      {({ isOpen }) => (
-        <>
-          <MenuButton
-            isActive={isOpen}
-            as={Button}
-            variant="filled"
-            rightIcon={!isPhoneVersion && <Icons.ChevronDown />}
-            zIndex="1"
-          >
-            <Flag country="US" />
-          </MenuButton>
-        </>
-      )}
-    </Menu>
+        {({ isOpen }) => (
+          <>
+            <MenuButton
+              isActive={isOpen}
+              as={Button}
+              variant="filled"
+              rightIcon={!isPhoneVersion && <Icons.ChevronDown />}
+              zIndex="1"
+            >
+              <Flag country="US" />
+            </MenuButton>
+          </>
+        )}
+      </Menu>
+
+      <Icons.Command fontSize={25} onClick={query?.toggle} cursor='pointer' />
     </Flex>
   )
 }
