@@ -3,14 +3,12 @@ import {
   Grid,
   GridItem,
   Image,
-  Text,
-  useBreakpointValue
+  Text
 } from '@chakra-ui/react'
 import Link from 'next/link'
 import { Icons } from '../assets/icons'
 
 export default function About() {
-  const isPhoneVersion = useBreakpointValue({ base: true, md: false })
   const phone = '+5542998256197'
   const urlAPIWhatsapp = `https://api.whatsapp.com/send?phone=${phone}`
 
@@ -21,6 +19,22 @@ export default function About() {
         templateRows="repeat(3, 1fr)"
         w="100%"
         gap={2}
+        overflowY='auto'
+        css={{
+          '::-webkit-scrollbar': {
+            width: 12,
+          },
+          '::-webkit-scrollbar-track': {
+            background: '#C9C9C9',
+            borderTopRightRadius: 5,
+            borderBottomRightRadius: 5,
+          },
+          '::-webkit-scrollbar-thumb': {
+            backgroundColor: '#353646',
+            borderTopRightRadius: 5,
+            borderBottomRightRadius: 5,
+          },
+        }}
       >
         <GridItem rowSpan={3}>
           <Flex gap={4} h="100%" flexDir="column" justifyContent="center">
@@ -54,7 +68,7 @@ export default function About() {
           </Flex>
         </GridItem>
 
-        <GridItem display="flex" flexDir="column" alignItems="center" gap={2}>
+        <GridItem mt={5} display="flex" flexDir="column" alignItems="center" gap={2}>
           <Flex as="span">
             <Image
               borderRadius="full"
@@ -63,8 +77,8 @@ export default function About() {
               alt="Leandro Cruz"
             />
           </Flex>
-          <Text fontSize={['md', 'lg', 'lg', 'lg', '2xl']} fontWeight="bold">
-            Hi, i am Leandro, nice to meet you!
+          <Text fontSize={['md', 'lg', 'lg', 'lg', '2xl']} fontWeight="medium">
+            Hi, I am Leandro, nice to meet you!
           </Text>
         </GridItem>
 
@@ -75,21 +89,37 @@ export default function About() {
             gap={2}
             fontSize={['xs', 'sm', 'sm', 'sm', 'md']}
           >
-            <Text>
-              Hi 👋, my name is Leandro but you can call me Le. I am 25 years
-              old and I have been married for 5 years. I was born in Chile, but
-              currently I live in Londrina, Paraná, Brazil.
+            <Text textAlign='center'>
+              I am 25 years old and I have been married for 5 years. I was born in Chile, but
+              currently I live in Londrina, Paraná, Brazil. My objetives to 2022 is learn speak English and meet developers of other countries.
             </Text>
 
-            <Text>
-              I have a degree in computer engineering and I am currently working
-              as a systems analyst.
+            <Text textAlign='center'>
+              I have a license in Computer Engineer and currently working as a Systems Analyst from Aceno Tecnologia.
             </Text>
 
-            <Text>
-              My main tools are: Node | React | React Native | TypeScript |
-              Prisma (ORM) | Git
+            <Text mt={5} fontWeight='medium'>
+              My main functions are:
             </Text>
+
+            <Flex flexDir='column'>
+              <li>Assist in the specification and documentation of systems</li>
+              <li>Assist in defining tools and technologies</li>
+              <li>Assist in defining the APIs of the platform under development</li>
+              <li>Elaboration of the visual design of web systems and mobile applications (Android and iOS)</li>
+              <li>Front-end development of web systems</li>
+              <li>Mobile application development for Android and iOS</li>
+              <li>Systems testing and validation</li>
+              <li>Work cooperatively with the other members of the company's technical and development team</li>
+            </Flex>
+
+            <Text fontWeight='medium'>
+              My main tools are:
+            </Text>
+
+            <Flex flexDir='column'>
+              <Text textAlign='center'>HTML5 | CSS3 | JavaScript | TypeScript | React | NextJS | React Native | Node | APIs Rest | Linux | Git</Text>
+            </Flex>
           </Flex>
         </GridItem>
 
