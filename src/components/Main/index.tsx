@@ -70,8 +70,8 @@ export function Main() {
 
       <GridItem display="flex" justifyContent="center" alignContent="center">
         <Flex
-          height={['100px', '300px', '700px']}
-          width={['50px', '250px', '550px']}
+          height={['300px', '300px', '400px', '700px']}
+          width={['250px', '250px', '350px', '550px']}
         >
           <Profile />
         </Flex>
