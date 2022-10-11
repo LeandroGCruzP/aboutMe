@@ -1,11 +1,13 @@
-import { Flex, HStack, Link as ChakraLink, Text } from '@chakra-ui/react'
+import { Button, Flex, HStack, Link as ChakraLink, Menu, MenuButton, Text, useBreakpointValue } from '@chakra-ui/react'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
-import { Icons } from '../../assets/icons'
-import { SelectLanguage } from '../SelectLanguage'
+import Flag from 'react-flagkit'
+
+import { Icons } from '@/assets/index'
 
 export function Header() {
   const { asPath } = useRouter()
+  const isPhoneVersion = useBreakpointValue({ base: true, md: false })
 
   return (
     <Flex
@@ -60,7 +62,21 @@ export function Header() {
         </HStack>
       </Flex>
 
-      <SelectLanguage />
+      <Menu matchWidth autoSelect={false}>
+      {({ isOpen }) => (
+        <>
+          <MenuButton
+            isActive={isOpen}
+            as={Button}
+            variant="filled"
+            rightIcon={!isPhoneVersion && <Icons.ChevronDown />}
+            zIndex="1"
+          >
+            <Flag country="US" />
+          </MenuButton>
+        </>
+      )}
+    </Menu>
     </Flex>
   )
 }

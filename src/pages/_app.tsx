@@ -1,29 +1,15 @@
-import { ChakraProvider, Flex } from '@chakra-ui/react'
+import { ChakraProvider } from '@chakra-ui/react'
 import type { AppProps } from 'next/app'
-import { useRouter } from 'next/router'
-import { Header } from '../components/Header'
 
-import { theme } from '../styles/theme'
+import { Layout } from '@/layout/index'
+import { theme } from '@/styles/theme'
 
 function MyApp({ Component, pageProps }: AppProps) {
-  const router = useRouter()
   return (
     <ChakraProvider theme={theme}>
-      <Flex
-        h="100vh"
-        w="100vw"
-        bgImage={router.pathname === '/' ? 'url(/Background.svg)' : ''}
-        bgPosition="center"
-        bgRepeat="repeat"
-        overflow="hidden"
-      >
-        <Flex w="95%" h="100%" marginX="auto" flexDir="column">
-          {router.pathname === '/' && <Header />}
-          {router.pathname === '/about' && <Header />}
-          {router.pathname === '/projects' && <Header />}
-          <Component {...pageProps} />
-        </Flex>
-      </Flex>
+      <Layout>
+        <Component {...pageProps} />
+      </Layout>
     </ChakraProvider>
   )
 }
