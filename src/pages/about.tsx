@@ -1,11 +1,5 @@
-import {
-  Flex,
-  Grid,
-  GridItem,
-  Image,
-  Text,
-  useBreakpointValue
-} from '@chakra-ui/react'
+import { Flex, Grid, GridItem, Text, useBreakpointValue } from '@chakra-ui/react'
+import Image from 'next/image'
 import Link from 'next/link'
 import { Icons } from '../assets/icons'
 
@@ -83,14 +77,14 @@ export default function About() {
           alignItems="center"
           gap={2}
         >
-          <Flex as="span">
-            <Image
-              borderRadius="full"
-              boxSize={['100px', '200px', '250px', '300px']}
-              src="https://github.com/leandroGCruzP.png"
-              alt="Leandro Cruz"
-            />
-          </Flex>
+          <Image
+            alt='Profile Image'
+            src='/profileLeandro.png'
+            height='400px'
+            width='300px'
+            priority
+          />
+
           <Text fontSize={['md', 'lg', 'lg', 'lg', '2xl']} fontWeight="medium">
             Hi, I am Leandro, nice to meet you!
           </Text>
@@ -148,8 +142,6 @@ export default function About() {
             </Flex>
           </Flex>
         </GridItem>
-
-        <GridItem></GridItem>
       </Grid>
     </Flex>
   )

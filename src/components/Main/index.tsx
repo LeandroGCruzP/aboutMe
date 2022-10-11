@@ -1,20 +1,13 @@
-import {
-  Flex,
-  Grid,
-  GridItem,
-  keyframes,
-  Text,
-  useBreakpointValue
-} from '@chakra-ui/react'
+import { Flex, Grid, GridItem, keyframes, Text, useBreakpointValue } from '@chakra-ui/react'
+import Image from 'next/image'
 import Link from 'next/link'
 import { Icons } from '../../assets/icons'
-import { Profile } from '../../assets/Profile'
 
 export function Main() {
   const animationKeyFrames = keyframes`
-  0% { background-position: 0% }
-  100% { background-position: 400% }
-`
+    0% { background-position: 0% }
+    100% { background-position: 400% }
+  `
 
   const isPhoneVersion = useBreakpointValue({ base: true, md: false })
 
@@ -69,12 +62,13 @@ export function Main() {
       </GridItem>
 
       <GridItem display="flex" justifyContent="center" alignContent="center">
-        <Flex
-          height={['100px', '300px', '700px']}
-          width={['50px', '250px', '550px']}
-        >
-          <Profile />
-        </Flex>
+        <Image
+          alt='Profile Image'
+          src='/profileLeandro.png'
+          height='800px'
+          width='600px'
+          priority
+        />
       </GridItem>
 
       <GridItem
