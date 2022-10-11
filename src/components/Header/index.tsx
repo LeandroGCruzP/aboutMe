@@ -14,7 +14,7 @@ export function Header() {
       minH="60px"
       align="center"
       justify="flex-end"
-      gap={5}
+      gap={[0, 0, 2, 4, 6 ]}
     >
       <Flex flex={1} justifyContent="space-between">
         <Flex cursor='pointer'>
@@ -23,8 +23,8 @@ export function Header() {
           </Link>
         </Flex>
 
-        <HStack spacing={8}>
-          <Text fontWeight="medium" fontSize={20} cursor='pointer'>
+        <HStack spacing={[4, 4, 4, 6, 8 ]}>
+          <Text fontWeight="medium" fontSize={['md', 'lg', 'lg', 'lg', '2xl']} cursor='pointer'>
             <Link href='/'>
               <ChakraLink
                 borderBottom={asPath === '/' ? '3px solid #FF0000' : ''}
@@ -35,7 +35,7 @@ export function Header() {
               </ChakraLink>
             </Link>
           </Text>
-          <Text fontWeight="medium" fontSize={20} cursor='pointer'>
+          <Text fontWeight="medium" fontSize={['md', 'lg', 'lg', 'lg', '2xl']} cursor='pointer'>
             <Link href='/about'>
               <ChakraLink
                 borderBottom={asPath === '/about' ? '3px solid #FF0000' : ''}
@@ -46,7 +46,7 @@ export function Header() {
               </ChakraLink>
             </Link>
           </Text>
-          <Text fontWeight="medium" fontSize={20} cursor='pointer'>
+          <Text fontWeight="medium" fontSize={['md', 'lg', 'lg', 'lg', '2xl']} cursor='pointer'>
             <Link href='/projects'>
               <ChakraLink
                 borderBottom={asPath === '/projects' ? '3px solid #FF0000' : ''}
@@ -59,6 +59,7 @@ export function Header() {
           </Text>
         </HStack>
       </Flex>
+
       <SelectLanguage />
     </Flex>
   )
