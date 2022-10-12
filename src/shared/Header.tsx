@@ -14,55 +14,53 @@ export function Header() {
   return (
     <Flex
       w="100%"
-      h="60px"
-      minH="60px"
       align="center"
       justify="flex-end"
       gap={[0, 0, 2, 4, 6 ]}
+      pt={['5px', '5px', '15px']}
     >
-      <Flex flex={1} justifyContent="space-between">
-        <Flex cursor='pointer'>
+      <HStack
+        spacing={[4, 4, 4, 6, 8 ]}
+        fontSize={['sm', 'md', 'md', 'md', 'lg']}
+        fontWeight="medium"
+        color='#D7CCC8'
+      >
+        <Text cursor='pointer'>
           <Link href='/'>
-            <Icons.Rocket size={30} />
+            <ChakraLink
+              borderBottom={asPath === '/' ? '3px solid #FF0000' : ''}
+              transition='0.2s filter'
+              _hover={{ filter: 'brightness(1.2)' }}
+            >
+              Home
+            </ChakraLink>
           </Link>
-        </Flex>
+        </Text>
 
-        <HStack spacing={[4, 4, 4, 6, 8 ]}>
-          <Text fontWeight="medium" fontSize={['md', 'lg', 'lg', 'lg', '2xl']} cursor='pointer'>
-            <Link href='/'>
-              <ChakraLink
-                borderBottom={asPath === '/' ? '3px solid #FF0000' : ''}
-                transition='0.2s filter'
-                _hover={{ filter: 'brightness(1.2)' }}
-              >
-                Home
-              </ChakraLink>
-            </Link>
-          </Text>
-          <Text fontWeight="medium" fontSize={['md', 'lg', 'lg', 'lg', '2xl']} cursor='pointer'>
-            <Link href='/about'>
-              <ChakraLink
-                borderBottom={asPath === '/about' ? '3px solid #FF0000' : ''}
-                transition='0.2s filter'
-                _hover={{ filter: 'brightness(1.2)' }}
-              >
-                About
-              </ChakraLink>
-            </Link>
-          </Text>
-          <Text fontWeight="medium" fontSize={['md', 'lg', 'lg', 'lg', '2xl']} cursor='pointer'>
-            <Link href='/projects'>
-              <ChakraLink
-                borderBottom={asPath === '/projects' ? '3px solid #FF0000' : ''}
-                transition='0.2s filter'
-                _hover={{ filter: 'brightness(1.2)' }}
-              >
-                Projects
-              </ChakraLink>
-            </Link>
-          </Text>
-        </HStack>
-      </Flex>
+        <Text cursor='pointer'>
+          <Link href='/about'>
+            <ChakraLink
+              borderBottom={asPath === '/about' ? '3px solid #FF0000' : ''}
+              transition='0.2s filter'
+              _hover={{ filter: 'brightness(1.2)' }}
+            >
+              About
+            </ChakraLink>
+          </Link>
+        </Text>
+
+        <Text cursor='pointer'>
+          <Link href='/projects'>
+            <ChakraLink
+              borderBottom={asPath === '/projects' ? '3px solid #FF0000' : ''}
+              transition='0.2s filter'
+              _hover={{ filter: 'brightness(1.2)' }}
+            >
+              Projects
+            </ChakraLink>
+          </Link>
+        </Text>
+      </HStack>
 
       <Menu matchWidth autoSelect={false}>
         {({ isOpen }) => (
@@ -71,16 +69,16 @@ export function Header() {
               isActive={isOpen}
               as={Button}
               variant="filled"
-              rightIcon={!isPhoneVersion && <Icons.ChevronDown />}
+              rightIcon={!isPhoneVersion && <Icons.ChevronDown color='#D7CCC8' />}
               zIndex="1"
             >
-              <Flag country="US" />
+              <Flag country="US" size={23} />
             </MenuButton>
           </>
         )}
       </Menu>
 
-      <Icons.Command fontSize={25} onClick={query?.toggle} cursor='pointer' />
+      <Icons.Command fontSize={20} onClick={query?.toggle} cursor='pointer' />
     </Flex>
   )
 }

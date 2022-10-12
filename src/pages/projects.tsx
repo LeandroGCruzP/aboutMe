@@ -1,20 +1,16 @@
-import { Box, Flex, Grid, GridItem, Image, SimpleGrid, Text, useBreakpointValue } from '@chakra-ui/react'
+import { Box, Flex, Grid, GridItem, Image, SimpleGrid, Text } from '@chakra-ui/react'
 import Link from 'next/link'
 
-import { Icons } from '@/assets/index'
-
 export default function Projects() {
-  const isPhoneVersion = useBreakpointValue({ base: true, md: false })
-  const phone = '+5542998256197'
-  const urlAPIWhatsapp = `https://api.whatsapp.com/send?phone=${phone}`
-
   return (
     <Flex w="100%" h="100%" overflowX="hidden">
       <Grid
-        templateColumns="50px 1fr"
+        templateColumns="1fr"
         w="100%"
         h="100%"
         overflowY="auto"
+        display='flex'
+        justifyContent='center'
         css={{
           '::-webkit-scrollbar': {
             width: 12
@@ -31,47 +27,6 @@ export default function Projects() {
           }
         }}
       >
-        <GridItem>
-          <Flex
-            gap={4}
-            h="100%"
-            flexDir="column"
-            justifyContent={isPhoneVersion ? 'flex-start' : 'center'}
-            pt={isPhoneVersion ? '25px' : 0}
-          >
-            <Flex cursor="pointer" maxW="-webkit-max-content">
-              <Link
-                href="https://www.linkedin.com/in/leandrogcruzp/"
-                target="_blank"
-              >
-                <Icons.Linkedin size={30} />
-              </Link>
-            </Flex>
-
-            <Flex cursor="pointer" maxW="-webkit-max-content">
-              <Link href="https://github.com/LeandroGCruzP" target="_blank">
-                <Icons.Github size={30} />
-              </Link>
-            </Flex>
-
-            <Flex cursor="pointer" maxW="-webkit-max-content">
-              <Link href="https://www.instagram.com/leh_gcruz/" target="_blank">
-                <Icons.Instagram size={30} />
-              </Link>
-            </Flex>
-
-            <Flex cursor="pointer" maxW="-webkit-max-content">
-              <Link
-                rel="noopener noreferrer"
-                href={urlAPIWhatsapp}
-                target="_blank"
-              >
-                <Icons.Whatsapp size={30} />
-              </Link>
-            </Flex>
-          </Flex>
-        </GridItem>
-
         <GridItem>
           <SimpleGrid
             flex="1"

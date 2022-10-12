@@ -1,14 +1,5 @@
 import { Flex, Grid, GridItem, keyframes, Text, useBreakpointValue } from '@chakra-ui/react'
 import Image from 'next/image'
-import Link from 'next/link'
-
-import { Icons } from '@/assets/index'
-
-const phone = '+5542998256197'
-const urlAPIWhatsapp = `https://api.whatsapp.com/send?phone=${phone}`
-const urlLinkedin = 'https://www.linkedin.com/in/leandrogcruzp/'
-const urlGithub = 'https://github.com/LeandroGCruzP'
-const urlInstagram = 'https://www.instagram.com/leh_gcruz/'
 
 export default function Home() {
   const animationKeyFrames = keyframes`
@@ -17,96 +8,73 @@ export default function Home() {
 `
 
 const animation = `${animationKeyFrames} 10s linear infinite`
-const isPhoneVersion = useBreakpointValue({ base: true, md: false })
+const isPhoneVersion = useBreakpointValue({ base: true, lg: false })
 
 return (
   <Grid
-    flex={1}
-    templateColumns={isPhoneVersion ? '50px 1fr' : '50px repeat(2, 1fr)'}
+    flex='1'
+    templateColumns={isPhoneVersion ? '1fr' : 'repeat(2, 1fr)'}
     templateRows={isPhoneVersion ? 'repeat(2, 1fr)' : 'none'}
-    alignContent="center"
+    gap={5}
+    pb={20}
   >
-    <GridItem rowSpan={2}>
-      <Flex
-        gap={4}
-        h="100%"
-        flexDir="column"
-        justifyContent={isPhoneVersion ? 'flex-start' : 'center'}
-        pt={isPhoneVersion ? '25px' : 0}
-      >
-        <Flex cursor="pointer" maxW="-webkit-max-content">
-          <Link href={urlLinkedin} target="_blank">
-            <Icons.Linkedin size={30} />
-          </Link>
-        </Flex>
-
-        <Flex cursor="pointer" maxW="-webkit-max-content">
-          <Link href={urlGithub} target="_blank">
-            <Icons.Github size={30} />
-          </Link>
-        </Flex>
-
-        <Flex cursor="pointer" maxW="-webkit-max-content">
-          <Link href={urlInstagram} target="_blank">
-            <Icons.Instagram size={30} />
-          </Link>
-        </Flex>
-
-        <Flex cursor="pointer" maxW="-webkit-max-content">
-          <Link href={urlAPIWhatsapp} target="_blank" rel="noopener noreferrer">
-            <Icons.Whatsapp size={30} />
-          </Link>
-        </Flex>
-      </Flex>
-    </GridItem>
-
-    <GridItem display="flex" justifyContent="center" alignContent="center">
-      <Image
-        alt='Profile Image'
-        src='/profileLeandro.png'
-        height='800px'
-        width='600px'
-        priority
-      />
+    <GridItem display='flex' justifyContent='center' alignContent='center'>
+      {isPhoneVersion ? (
+        <Image
+          alt='Profile Image'
+          src='/profileLeandro.png'
+          height='500px'
+          width='350px'
+          priority
+        />
+      ) : (
+        <Image
+          alt='Profile Image'
+          src='/profileLeandro.png'
+          height='800px'
+          width='600px'
+          priority
+        />
+      )}
     </GridItem>
 
     <GridItem
-      display="flex"
+      display='flex'
       alignItems={isPhoneVersion ? 'flex-start' : 'center'}
       justifyContent={isPhoneVersion ? 'center' : 'none'}
       gap={2}
     >
-      <Flex flexDir="column" w="-webkit-max-content">
+      <Flex flexDir='column' w='-webkit-max-content'>
         <Text
-          bgGradient="linear(to-r, #ff0000, #ffff00,#ff00f3,#0033ff,#ff00c4, #ff0000)"
-          bgClip="text"
+          bgGradient='linear(to-r, #ff0000, #ffff00,#ff00f3,#0033ff,#ff00c4, #ff0000)'
+          bgClip='text'
           animation={animation}
-          bgSize="400%"
-          fontSize={['2rem', '3rem', '4rem']}
-          fontWeight="bold"
-          letterSpacing="0.75rem"
+          bgSize='400%'
+          fontSize={['1.8rem', '1.8rem', '2.8rem', '3.8rem']}
+          fontWeight='bold'
+          letterSpacing='0.75rem'
         >
           COMPUTER
         </Text>
         <Text
-          bgGradient="linear(to-r, #ff0000, #ffff00,#ff00f3,#0033ff,#ff00c4, #ff0000)"
-          bgClip="text"
+          bgGradient='linear(to-r, #ff0000, #ffff00,#ff00f3,#0033ff,#ff00c4, #ff0000)'
+          bgClip='text'
           animation={animation}
-          bgSize="400%"
-          fontSize={['1.8rem', '2.8rem', '3.8rem']}
-          fontWeight="semibold"
-          letterSpacing="1.3rem"
+          bgSize='400%'
+          fontSize={['1.5rem', '1.5rem', '2.5rem', '3.5rem']}
+          fontWeight='semibold'
+          letterSpacing='1.3rem'
         >
           ENGINEER
         </Text>
         <Text
-          bgGradient="linear(to-r, #ff0000, #ffff00,#ff00f3,#0033ff,#ff00c4, #ff0000)"
-          bgClip="text"
+          bgGradient='linear(to-r, #ff0000, #ffff00,#ff00f3,#0033ff,#ff00c4, #ff0000)'
+          bgClip='text'
           animation={animation}
-          bgSize="400%"
-          fontSize={['1.6rem', '2.6rem', '3.6rem']}
-          fontWeight="light"
-          letterSpacing="1.1rem"
+          bgSize='400%'
+          fontSize={['1.2rem', '1.2rem', '2.2rem', '3.2rem']}
+          fontWeight='light'
+          letterSpacing='1.1rem'
         >
           FULLSTACK
         </Text>
