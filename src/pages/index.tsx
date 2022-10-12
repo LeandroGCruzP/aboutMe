@@ -8,34 +8,47 @@ export default function Home() {
 `
 
 const animation = `${animationKeyFrames} 10s linear infinite`
+
 const isPhoneVersion = useBreakpointValue({ base: true, lg: false })
+const isTabletVersion = useBreakpointValue({ base: true, xl: false })
 
 return (
   <Grid
     flex='1'
     templateColumns={isPhoneVersion ? '1fr' : 'repeat(2, 1fr)'}
-    templateRows={isPhoneVersion ? 'repeat(2, 1fr)' : 'none'}
+    templateRows={isPhoneVersion ? 'repeat(2, 2fr, 1fr)' : 'none'}
     gap={5}
-    pb={20}
   >
-    <GridItem display='flex' justifyContent='center' alignContent='center'>
+    <GridItem display='flex' justifyContent='center' alignItems='flex-end'>
       {isPhoneVersion ? (
         <Image
           alt='Profile Image'
           src='/profileLeandro.png'
-          height='500px'
-          width='350px'
+          height='400px'
+          width='274.82px'
+          layout='fixed'
+          priority
+        />
+      ) : isTabletVersion ? (
+        <Image
+          alt='Profile Image'
+          src='/profileLeandro.png'
+          height='600px'
+          width='400px'
+          layout='fixed'
           priority
         />
       ) : (
         <Image
           alt='Profile Image'
           src='/profileLeandro.png'
-          height='800px'
-          width='600px'
+          height='700px'
+          width='480.94px'
+          layout='fixed'
           priority
         />
       )}
+
     </GridItem>
 
     <GridItem
