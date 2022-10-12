@@ -13,7 +13,7 @@ export function Layout(props: LayoutProps) {
     <Flex
       w='100vw'
       h='100vh'
-      px={['5px', '5px', '20px']}
+      pl={['5px', '5px', '20px']}
       bgImage={'url(/Background.svg)'}
       bgPosition='center'
       bgRepeat='repeat'
@@ -24,7 +24,25 @@ export function Layout(props: LayoutProps) {
       <Flex flex='1' flexDir='column'>
         <Shared.Header />
 
-        <Flex flex='1'>
+        <Flex
+          flex='1'
+          overflowY='auto'
+          css={{
+            '::-webkit-scrollbar': {
+              width: 12
+            },
+            '::-webkit-scrollbar-track': {
+              background: '#222222',
+              borderTopRightRadius: 5,
+              borderBottomRightRadius: 5
+            },
+            '::-webkit-scrollbar-thumb': {
+              backgroundColor: '#131313',
+              borderTopRightRadius: 5,
+              borderBottomRightRadius: 5
+            }
+          }}
+        >
           {children}
         </Flex>
       </Flex>

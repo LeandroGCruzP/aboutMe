@@ -18,6 +18,7 @@ export function Header() {
       justify="flex-end"
       gap={[0, 0, 2, 4, 6 ]}
       pt={['5px', '5px', '15px']}
+      pr={['5px', '5px', '20px']}
     >
       <HStack
         spacing={[4, 4, 4, 6, 8 ]}

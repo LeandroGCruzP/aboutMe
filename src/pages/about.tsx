@@ -5,29 +5,12 @@ import Image from 'next/image'
 export default function About() {
   return (
     <Grid
+      flex='1'
       templateColumns="1fr"
-      templateRows="repeat(2, 1fr)"
-      w="100%"
+      templateRows="(1fr, 1fr)"
       gap={2}
-      overflowY="auto"
-      css={{
-        '::-webkit-scrollbar': {
-          width: 12
-        },
-        '::-webkit-scrollbar-track': {
-          background: '#222222',
-          borderTopRightRadius: 5,
-          borderBottomRightRadius: 5
-        },
-        '::-webkit-scrollbar-thumb': {
-          backgroundColor: '#131313',
-          borderTopRightRadius: 5,
-          borderBottomRightRadius: 5
-        }
-      }}
     >
       <GridItem
-        mt={5}
         display="flex"
         flexDir="column"
         alignItems="center"
@@ -36,8 +19,9 @@ export default function About() {
         <Image
           alt='Profile Image'
           src='/profileLeandro.png'
-          height='400px'
-          width='300px'
+          height='300px'
+          width='206.12px'
+          layout='fixed'
           priority
         />
 
@@ -46,9 +30,9 @@ export default function About() {
         </Text>
       </GridItem>
 
-      <GridItem display="flex" justifyContent="center">
+      <GridItem flex='1' display="flex" justifyContent="center" pb={20}>
         <Flex
-          maxW="700px"
+          maxW={['95%', '95%', '80%']}
           flexDir="column"
           gap={2}
           fontSize={['xs', 'sm', 'sm', 'sm', 'md']}
