@@ -90,9 +90,9 @@ function RenderResult() {
               justify='space-between'
             >
               <Text>{item.name}</Text>
-              {item.id === 'home' && <Kbd>H</Kbd>}
-              {item.id === 'about' && <Kbd>A</Kbd>}
-              {item.id === 'projects' && <Kbd>P</Kbd>}
+              {item.id === 'home' && <Kbd bg='#1C1C1C'>H</Kbd>}
+              {item.id === 'about' && <Kbd bg='#1C1C1C'>A</Kbd>}
+              {item.id === 'projects' && <Kbd bg='#1C1C1C'>P</Kbd>}
             </Flex>
           )
         )

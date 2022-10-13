@@ -98,7 +98,7 @@ return (
 
         <Flex onClick={query?.toggle} cursor='pointer' align='center' gap={2}>
           <Text fontSize={['xs', 'sm', 'sm', 'sm', 'md']} fontWeight='medium'>
-            Press <Kbd>ctrl</Kbd> + <Kbd>k</Kbd> to navigate
+            Press <Kbd bg='#1C1C1C'>ctrl</Kbd> + <Kbd bg='#1C1C1C'>k</Kbd> to navigate
           </Text>
 
           <Icons.Rocket fontSize={15} />
