@@ -1,7 +1,10 @@
-import { Flex, Grid, GridItem, keyframes, Text, useBreakpointValue } from '@chakra-ui/react'
+import { Flex, Grid, GridItem, Kbd, keyframes, Text, useBreakpointValue } from '@chakra-ui/react'
+import { useKBar } from 'kbar'
 import Image from 'next/image'
+import { Icons } from '../assets'
 
 export default function Home() {
+  const { query } = useKBar()
   const animationKeyFrames = keyframes`
   0% { background-position: 0% }
   100% { background-position: 400% }
@@ -91,6 +94,14 @@ return (
         >
           FULLSTACK
         </Text>
+
+        <Flex onClick={query?.toggle} cursor='pointer' align='center' gap={2}>
+          <Text fontSize={['xs', 'sm', 'sm', 'sm', 'md']} fontWeight='medium'>
+            Press <Kbd>ctrl</Kbd> + <Kbd>k</Kbd> to navigate
+          </Text>
+
+          <Icons.Rocket fontSize={15} />
+        </Flex>
       </Flex>
     </GridItem>
   </Grid>
