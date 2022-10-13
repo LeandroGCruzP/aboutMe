@@ -41,7 +41,7 @@ export function CommandBar(props: CommandBarProps) {
           <Flex as={KBarPositioner} bg='rgb(0, 0, 0, 0.6)'>
             <KBarAnimator>
               <Input
-                w={600}
+                w={[350, 350, 600]}
                 h={50}
                 as={KBarSearch}
                 defaultPlaceholder='Type a command or search'

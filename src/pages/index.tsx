@@ -1,7 +1,8 @@
 import { Flex, Grid, GridItem, Kbd, keyframes, Text, useBreakpointValue } from '@chakra-ui/react'
 import { useKBar } from 'kbar'
 import Image from 'next/image'
-import { Icons } from '../assets'
+
+import { Icons } from '@/assets/index'
 
 export default function Home() {
   const { query } = useKBar()
