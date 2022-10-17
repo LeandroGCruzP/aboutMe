@@ -1,4 +1,6 @@
 import { Box, Image, SimpleGrid, Text } from '@chakra-ui/react'
+import { GetServerSideProps } from 'next'
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 import Link from 'next/link'
 
 export default function Projects() {
@@ -9,7 +11,6 @@ export default function Projects() {
       minChildWidth={['280px', '300px', '320px', '340px']}
       p='10px 10px 0 10px'
     >
-      {/* //Linkedin */}
       <Box borderRadius={8}>
         <Text textAlign="center" pb={1} fontWeight="bold">
           Clone Linkedin
@@ -28,7 +29,6 @@ export default function Projects() {
         </Text>
       </Box>
 
-      {/* //Vercel */}
       <Box borderRadius={8} >
         <Text textAlign="center" pb={1} fontWeight="bold">
           Clone Vercel
@@ -47,15 +47,11 @@ export default function Projects() {
         </Text>
       </Box>
 
-      {/* //Twitter */}
       <Box borderRadius={8}>
         <Text textAlign="center" pb={1} fontWeight="bold">
           Clone Twitter
         </Text>
-        <Link
-          href="https://clone-twitter-responsive.netlify.app/"
-          passHref
-        >
+        <Link href="https://clone-twitter-responsive.netlify.app/" passHref>
           <a target="_blank">
             <Image
               src="./images/Twitter.png"
@@ -70,7 +66,6 @@ export default function Projects() {
         </Text>
       </Box>
 
-      {/* //Pinterest */}
       <Box borderRadius={8}>
         <Text textAlign="center" pb={1} fontWeight="bold">
           Clone Pinterest
@@ -109,4 +104,12 @@ export default function Projects() {
       </Box>
     </SimpleGrid>
   )
+}
+
+export const getServerSideProps: GetServerSideProps = async (ctx) => {
+  return {
+    props: {
+      ...(await serverSideTranslations(String(ctx.locale), ['header']))
+    }
+  }
 }

@@ -1,12 +1,14 @@
 import { Button, Flex, HStack, Link as ChakraLink, Menu, MenuButton, Text, useBreakpointValue } from '@chakra-ui/react'
+import { useKBar } from 'kbar'
+import { useTranslation } from 'next-i18next'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
 import Flag from 'react-flagkit'
 
 import { Icons } from '@/assets/index'
-import { useKBar } from 'kbar'
 
 export function Header() {
+  const { t } = useTranslation('header')
   const { asPath } = useRouter()
   const { query } = useKBar()
   const isPhoneVersion = useBreakpointValue({ base: true, md: false })
@@ -33,7 +35,7 @@ export function Header() {
               transition='0.2s filter'
               _hover={{ filter: 'brightness(1.2)' }}
             >
-              Home
+              {t('link_home')}
             </ChakraLink>
           </Link>
         </Text>
@@ -45,7 +47,7 @@ export function Header() {
               transition='0.2s filter'
               _hover={{ filter: 'brightness(1.2)' }}
             >
-              About
+              {t('link_about')}
             </ChakraLink>
           </Link>
         </Text>
@@ -57,7 +59,7 @@ export function Header() {
               transition='0.2s filter'
               _hover={{ filter: 'brightness(1.2)' }}
             >
-              Projects
+              {t('link_projects')}
             </ChakraLink>
           </Link>
         </Text>

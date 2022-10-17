@@ -1,6 +1,7 @@
 import { Flex, Grid, GridItem, Text } from '@chakra-ui/react'
+import { GetServerSideProps } from 'next'
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 import Image from 'next/image'
-
 
 export default function About() {
   return (
@@ -84,4 +85,12 @@ export default function About() {
       </GridItem>
     </Grid>
   )
+}
+
+export const getServerSideProps: GetServerSideProps = async (ctx) => {
+  return {
+    props: {
+      ...(await serverSideTranslations(String(ctx.locale), ['header']))
+    }
+  }
 }

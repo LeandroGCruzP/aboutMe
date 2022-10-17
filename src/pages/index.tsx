@@ -1,10 +1,14 @@
 import { Flex, Grid, GridItem, Kbd, keyframes, Text, useBreakpointValue } from '@chakra-ui/react'
 import { useKBar } from 'kbar'
+import { GetServerSideProps } from 'next'
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 import Image from 'next/image'
 
 import { Icons } from '@/assets/index'
+import { useTranslation } from 'next-i18next'
 
 export default function Home() {
+  const { t } = useTranslation('home')
   const { query } = useKBar()
   const animationKeyFrames = keyframes`
   0% { background-position: 0% }
@@ -26,7 +30,7 @@ return (
     <GridItem display='flex' justifyContent='center' alignItems='flex-end'>
       {isPhoneVersion ? (
         <Image
-          alt='Profile Image'
+          alt={t('alt_image')}
           src='/profileLeandro.png'
           height='400px'
           width='274.82px'
@@ -35,7 +39,7 @@ return (
         />
       ) : isTabletVersion ? (
         <Image
-          alt='Profile Image'
+          alt={t('alt_image')}
           src='/profileLeandro.png'
           height='600px'
           width='400px'
@@ -44,7 +48,7 @@ return (
         />
       ) : (
         <Image
-          alt='Profile Image'
+          alt={t('alt_image')}
           src='/profileLeandro.png'
           height='700px'
           width='480.94px'
@@ -71,7 +75,7 @@ return (
           fontWeight='bold'
           letterSpacing='0.75rem'
         >
-          COMPUTER
+          {t('title_one')}
         </Text>
         <Text
           bgGradient='linear(to-r, #ff0000, #ffff00,#ff00f3,#0033ff,#ff00c4, #ff0000)'
@@ -82,7 +86,7 @@ return (
           fontWeight='semibold'
           letterSpacing='1.3rem'
         >
-          ENGINEER
+          {t('title_two')}
         </Text>
         <Text
           bgGradient='linear(to-r, #ff0000, #ffff00,#ff00f3,#0033ff,#ff00c4, #ff0000)'
@@ -93,12 +97,12 @@ return (
           fontWeight='light'
           letterSpacing='1.1rem'
         >
-          FULLSTACK
+          {t('title_three')}
         </Text>
 
         <Flex onClick={query?.toggle} cursor='pointer' align='center' gap={2}>
           <Text fontSize={['xs', 'sm', 'sm', 'sm', 'md']} fontWeight='medium'>
-            Press <Kbd bg='#1C1C1C'>ctrl</Kbd> + <Kbd bg='#1C1C1C'>k</Kbd> to navigate
+            {t('action_press')} <Kbd bg='#1C1C1C'>ctrl</Kbd> + <Kbd bg='#1C1C1C'>k</Kbd> {t('action_to_navigate')}
           </Text>
 
           <Icons.Rocket fontSize={15} />
@@ -106,5 +110,17 @@ return (
       </Flex>
     </GridItem>
   </Grid>
-)
+)}
+
+export const getServerSideProps: GetServerSideProps = async ctx => {
+  const { locale } = ctx
+
+  return {
+    props: {
+      ...(await serverSideTranslations(String(locale), [
+        'home',
+        'header'
+      ]))
+    }
+  }
 }
