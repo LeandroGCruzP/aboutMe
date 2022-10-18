@@ -1,11 +1,11 @@
+import { Layouts } from '@/layout/index'
 import { Flex, Grid, GridItem, Text } from '@chakra-ui/react'
 import { GetServerSideProps } from 'next'
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 import Head from 'next/head'
 import Image from 'next/image'
-import { Layout } from '../layout'
 
-About.PageLayout = Layout
+About.PageLayout = Layouts.Layout
 
 export default function About() {
   return (
