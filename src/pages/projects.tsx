@@ -1,9 +1,9 @@
-import { Layouts } from '@/layout/index'
 import { Box, Image, SimpleGrid, Text } from '@chakra-ui/react'
 import { GetServerSideProps } from 'next'
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 import Head from 'next/head'
 import Link from 'next/link'
+import { Layouts } from '~/layout'
 
 Projects.PageLayout = Layouts.Layout
 

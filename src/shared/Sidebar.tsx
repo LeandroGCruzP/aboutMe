@@ -1,6 +1,6 @@
-import { Icons } from '@/assets/index'
 import { Flex, Tooltip } from '@chakra-ui/react'
 import Link from 'next/link'
+import { Icons } from '~/assets'
 
 const phone = '+5542998256197'
 const urlAPIWhatsapp = `https://api.whatsapp.com/send?phone=${phone}`

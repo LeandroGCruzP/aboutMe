@@ -1,5 +1,3 @@
-import { Icons } from '@/assets/index'
-import { Layouts } from '@/layout/index'
 import { Flex, Grid, GridItem, Kbd, keyframes, Text, useBreakpointValue } from '@chakra-ui/react'
 import { useKBar } from 'kbar'
 import { GetServerSideProps } from 'next'
@@ -7,6 +5,8 @@ import { useTranslation } from 'next-i18next'
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 import Head from 'next/head'
 import Image from 'next/image'
+import { Icons } from '~/assets'
+import { Layouts } from '~/layout'
 
 Home.PageLayout = Layouts.Layout
 

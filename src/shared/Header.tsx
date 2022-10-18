@@ -1,10 +1,10 @@
-import { Icons } from '@/assets/index'
 import { Button, Flex, HStack, Link as ChakraLink, Menu, MenuButton, Text, useBreakpointValue } from '@chakra-ui/react'
 import { useKBar } from 'kbar'
 import { useTranslation } from 'next-i18next'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
 import Flag from 'react-flagkit'
+import { Icons } from '~/assets'
 
 export function Header() {
   const { t } = useTranslation('header')

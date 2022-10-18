@@ -1,5 +1,5 @@
-import { Shared } from '@/shared/index'
 import { Flex } from '@chakra-ui/react'
+import { Shared } from '~/shared'
 
 interface LayoutProps {
   children: React.ReactNode

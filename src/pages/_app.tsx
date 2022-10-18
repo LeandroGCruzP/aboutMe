@@ -1,9 +1,9 @@
-import { CommandBar } from '@/shared/CommandBar'
-import { theme } from '@/styles/theme'
 import { ChakraProvider } from '@chakra-ui/react'
 import { NextComponentType, NextPageContext } from 'next'
 import { appWithTranslation } from 'next-i18next'
 import type { AppProps } from 'next/app'
+import { Shared } from '~/shared'
+import { theme } from '~/styles/theme'
 
 type ComponentWithPageLayout = AppProps & {
   Component: AppProps['Component'] & {
@@ -14,7 +14,7 @@ type ComponentWithPageLayout = AppProps & {
 function MyApp({ Component, pageProps }: ComponentWithPageLayout) {
   return (
     <ChakraProvider theme={theme}>
-      <CommandBar>
+      <Shared.CommandBar>
         {Component.PageLayout ? (
           <Component.PageLayout>
             <Component {...pageProps} />
@@ -22,7 +22,7 @@ function MyApp({ Component, pageProps }: ComponentWithPageLayout) {
         ) : (
           <Component {...pageProps} />
         )}
-      </CommandBar>
+      </Shared.CommandBar>
     </ChakraProvider>
   )
 }
