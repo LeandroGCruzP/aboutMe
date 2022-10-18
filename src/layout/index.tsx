@@ -1,14 +1,11 @@
-import { Flex } from '@chakra-ui/react'
-
 import { Shared } from '@/shared/index'
+import { Flex } from '@chakra-ui/react'
 
 interface LayoutProps {
   children: React.ReactNode
 }
 
-export function Layout(props: LayoutProps) {
-  const { children } = props
-
+export function Layout({ children }: LayoutProps) {
   return (
     <Flex
       w='100vw'
@@ -25,6 +22,7 @@ export function Layout(props: LayoutProps) {
         <Shared.Header />
 
         <Flex
+          as='main'
           flex='1'
           overflowY='auto'
           css={{
