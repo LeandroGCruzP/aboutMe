@@ -1,6 +1,6 @@
-import { Flex, Input, Kbd, Text } from "@chakra-ui/react";
-import { KBarAnimator, KBarPortal, KBarPositioner, KBarProvider, KBarResults, KBarSearch, useMatches } from "kbar";
-import { useRouter } from "next/router";
+import { Flex, Input, Kbd, Text } from '@chakra-ui/react'
+import { KBarAnimator, KBarPortal, KBarPositioner, KBarProvider, KBarResults, KBarSearch, useMatches } from 'kbar'
+import { useRouter } from 'next/router'
 
 interface CommandBarProps {
   children: React.ReactNode

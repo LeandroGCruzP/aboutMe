@@ -1,11 +1,10 @@
+import { Icons } from '@/assets/index'
 import { Button, Flex, HStack, Link as ChakraLink, Menu, MenuButton, Text, useBreakpointValue } from '@chakra-ui/react'
 import { useKBar } from 'kbar'
 import { useTranslation } from 'next-i18next'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
 import Flag from 'react-flagkit'
-
-import { Icons } from '@/assets/index'
 
 export function Header() {
   const { t } = useTranslation('header')
@@ -15,9 +14,9 @@ export function Header() {
 
   return (
     <Flex
-      w="100%"
-      align="center"
-      justify="flex-end"
+      w='100%'
+      align='center'
+      justify='flex-end'
       gap={[0, 0, 2, 4, 6 ]}
       pt={['5px', '5px', '15px']}
       pr={['5px', '5px', '20px']}
@@ -25,7 +24,7 @@ export function Header() {
       <HStack
         spacing={[4, 4, 4, 6, 8 ]}
         fontSize={['sm', 'md', 'md', 'md', 'lg']}
-        fontWeight="medium"
+        fontWeight='medium'
         color='#D7CCC8'
       >
         <Text cursor='pointer'>
@@ -71,11 +70,11 @@ export function Header() {
             <MenuButton
               isActive={isOpen}
               as={Button}
-              variant="filled"
+              variant='filled'
               rightIcon={!isPhoneVersion && <Icons.ChevronDown color='#D7CCC8' />}
-              zIndex="1"
+              zIndex='1'
             >
-              <Flag country="US" size={23} />
+              <Flag country='US' size={23} />
             </MenuButton>
           </>
         )}
