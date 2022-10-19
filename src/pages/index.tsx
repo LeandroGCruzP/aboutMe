@@ -1,6 +1,6 @@
 import { Flex, Grid, GridItem, Kbd, keyframes, Text, useBreakpointValue } from '@chakra-ui/react'
 import { useKBar } from 'kbar'
-import { GetServerSideProps } from 'next'
+import { GetStaticProps } from 'next'
 import { useTranslation } from 'next-i18next'
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 import Head from 'next/head'
@@ -131,7 +131,7 @@ export default function Home() {
   )
 }
 
-export const getServerSideProps: GetServerSideProps = async ctx => {
+export const getStaticProps: GetStaticProps = async ctx => {
   const { locale } = ctx
 
   return {

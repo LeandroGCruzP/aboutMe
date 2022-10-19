@@ -1,5 +1,5 @@
 import { Box, Image, SimpleGrid, Text } from '@chakra-ui/react'
-import { GetServerSideProps } from 'next'
+import { GetStaticProps } from 'next'
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 import Head from 'next/head'
 import Link from 'next/link'
@@ -116,7 +116,7 @@ export default function Projects() {
   )
 }
 
-export const getServerSideProps: GetServerSideProps = async ctx => {
+export const getStaticProps: GetStaticProps = async ctx => {
   return {
     props: {
       ...(await serverSideTranslations(String(ctx.locale), ['header']))
