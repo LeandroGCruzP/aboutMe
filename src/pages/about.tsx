@@ -1,5 +1,6 @@
 import { Flex, Grid, GridItem, Text } from '@chakra-ui/react'
 import { GetStaticProps } from 'next'
+import { useTranslation } from 'next-i18next'
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 import Head from 'next/head'
 import Image from 'next/image'
@@ -9,6 +10,8 @@ import { Shared } from '~/shared'
 About.PageLayout = Layouts.Layout
 
 export default function About() {
+  const { t } = useTranslation('about')
+
   return (
     <>
       <Head>
@@ -27,7 +30,7 @@ export default function About() {
           />
 
           <Text fontSize={['md', 'lg', 'lg', 'lg', '2xl']} fontWeight='medium'>
-            Hi, I am Leandro, nice to meet you!
+            {t('greeting')}
           </Text>
         </GridItem>
 
@@ -39,41 +42,31 @@ export default function About() {
             fontSize={['xs', 'sm', 'sm', 'sm', 'md']}
           >
             <Text textAlign='center'>
-              I am 25 years old and I have been married for 5 years. I was born
-              in Chile, but currently I live in Londrina, Paraná, Brazil. My
-              objetives to 2022 is learn speak English and meet developers of
-              other countries.
+              {t('presentation_one')}
             </Text>
 
             <Text textAlign='center'>
-              I have a license in Computer Engineer and currently working as a
-              Systems Analyst from Aceno Tecnologia.
+              {t('presentation_two')}
             </Text>
 
             <Text mt={5} fontWeight='medium'>
-              My main functions are:
+              {t('subtitle_functions')}
             </Text>
 
             <Flex flexDir='column'>
-              <li>Assist in the specification and documentation of systems</li>
-              <li>Assist in defining tools and technologies</li>
-              <li>
-                Assist in defining the APIs of the platform under development
-              </li>
-              <li>
-                Elaboration of the visual design of web systems and mobile
-                applications (Android and iOS)
-              </li>
-              <li>Front-end development of web systems</li>
-              <li>Mobile application development for Android and iOS</li>
-              <li>Systems testing and validation</li>
-              <li>
-                Work cooperatively with the other members of the company is
-                technical and development team
-              </li>
+              <li>{t('li_1')}</li>
+              <li>{t('li_2')}</li>
+              <li>{t('li_3')}</li>
+              <li>{t('li_4')}</li>
+              <li>{t('li_5')}</li>
+              <li>{t('li_6')}</li>
+              <li>{t('li_7')}</li>
+              <li>{t('li_8')}</li>
             </Flex>
 
-            <Text fontWeight='medium'>My main tools are:</Text>
+            <Text fontWeight='medium'>
+              {t('subtitle_tools')}
+            </Text>
 
             <Shared.Tools />
           </Flex>
@@ -86,7 +79,7 @@ export default function About() {
 export const getStaticProps: GetStaticProps = async ctx => {
   return {
     props: {
-      ...(await serverSideTranslations(String(ctx.locale), ['header']))
+      ...(await serverSideTranslations(String(ctx.locale), ['about', 'header']))
     }
   }
 }
