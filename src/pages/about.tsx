@@ -4,6 +4,7 @@ import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 import Head from 'next/head'
 import Image from 'next/image'
 import { Layouts } from '~/layout'
+import { Shared } from '~/shared'
 
 About.PageLayout = Layouts.Layout
 
@@ -74,12 +75,7 @@ export default function About() {
 
             <Text fontWeight='medium'>My main tools are:</Text>
 
-            <Flex flexDir='column'>
-              <Text textAlign='center'>
-                HTML5 | CSS3 | JavaScript | TypeScript | React | NextJS | React
-                Native | Node | APIs Rest | Linux | Git
-              </Text>
-            </Flex>
+            <Shared.Tools />
           </Flex>
         </GridItem>
       </Grid>
