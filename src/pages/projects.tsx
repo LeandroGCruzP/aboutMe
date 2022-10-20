@@ -1,5 +1,6 @@
 import { Box, Image, SimpleGrid, Text } from '@chakra-ui/react'
 import { GetStaticProps } from 'next'
+import { useTranslation } from 'next-i18next'
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 import Head from 'next/head'
 import Link from 'next/link'
@@ -8,6 +9,8 @@ import { Layouts } from '~/layout'
 Projects.PageLayout = Layouts.Layout
 
 export default function Projects() {
+  const { t } = useTranslation('projects')
+
   return (
     <>
       <Head>
@@ -33,8 +36,9 @@ export default function Projects() {
               />
             </a>
           </Link>
+
           <Text pt={1} fontSize={['xs', 'sm', 'sm', 'sm', 'md']}>
-            Working with responsivity with 3 columns.
+            {t('linkedin_caption')}
           </Text>
         </Box>
 
@@ -51,8 +55,9 @@ export default function Projects() {
               />
             </a>
           </Link>
+
           <Text pt={1} fontSize={['xs', 'sm', 'sm', 'sm', 'md']}>
-            Handling title effect.
+            {t('vercel_caption')}
           </Text>
         </Box>
 
@@ -71,7 +76,7 @@ export default function Projects() {
           </Link>
 
           <Text pt={1} fontSize={['xs', 'sm', 'sm', 'sm', 'md']}>
-            Improved responsivity work with 3 columns.
+            {t('twitter_caption')}
           </Text>
         </Box>
 
@@ -88,12 +93,12 @@ export default function Projects() {
               />
             </a>
           </Link>
+
           <Text pt={1} fontSize={['xs', 'sm', 'sm', 'sm', 'md']}>
-            Custom image placement.
+            {t('pinterest_caption')}
           </Text>
         </Box>
 
-        {/* //Mercado Livre */}
         <Box borderRadius={8}>
           <Text textAlign='center' pb={1} fontWeight='bold'>
             Clone Mercado Livre
@@ -107,8 +112,9 @@ export default function Projects() {
               />
             </a>
           </Link>
+
           <Text pt={1} fontSize={['xs', 'sm', 'sm', 'sm', 'md']}>
-            Product sales page basics.
+            {t('mercado_livre_caption')}
           </Text>
         </Box>
       </SimpleGrid>
@@ -119,7 +125,7 @@ export default function Projects() {
 export const getStaticProps: GetStaticProps = async ctx => {
   return {
     props: {
-      ...(await serverSideTranslations(String(ctx.locale), ['header']))
+      ...(await serverSideTranslations(String(ctx.locale), ['projects', 'header']))
     }
   }
 }
