@@ -83,7 +83,7 @@ export default function Home() {
               fontWeight='bold'
               letterSpacing='0.75rem'
             >
-              {t('title_one')}
+              COMPUTER
             </Text>
             <Text
               bgGradient={gradient}
@@ -94,7 +94,7 @@ export default function Home() {
               fontWeight='semibold'
               letterSpacing='1.3rem'
             >
-              {t('title_two')}
+              ENGINEER
             </Text>
             <Text
               bgGradient={gradient}
@@ -105,7 +105,7 @@ export default function Home() {
               fontWeight='light'
               letterSpacing='1.1rem'
             >
-              {t('title_three')}
+              FULLSTACK
             </Text>
 
             <Flex
@@ -113,6 +113,7 @@ export default function Home() {
               cursor='pointer'
               align='center'
               gap={2}
+              mt={2}
             >
               <Text
                 fontSize={['xs', 'sm', 'sm', 'sm', 'md']}
