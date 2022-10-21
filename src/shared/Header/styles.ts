@@ -41,10 +41,9 @@ const menuItem: MenuItemProps = {
   borderLeft: '3px solid transparent',
   justifyContent: 'space-between',
   fontSize: ['sm', 'md', 'md', 'md', 'lg'],
-  transition: '0.2s filter',
   _hover: {
     borderColor: '#FF0000',
-    filter: 'brightness(1.2)',
+    bg: 'none',
   }
 }
 
