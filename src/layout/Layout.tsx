@@ -10,7 +10,6 @@ export function Layout({ children }: LayoutProps) {
     <Flex
       w='100vw'
       h='100vh'
-      pl={['5px', '5px', '20px']}
       bgImage={'url(/Background.svg)'}
       bgPosition='center'
       bgRepeat='repeat'
