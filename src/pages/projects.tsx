@@ -117,6 +117,25 @@ export default function Projects() {
             {t('mercado_livre_caption')}
           </Text>
         </Box>
+
+        <Box borderRadius={8}>
+          <Text textAlign='center' pb={1} fontWeight='bold'>
+            DashGo
+          </Text>
+          <Link href='https://dashpro.vercel.app/' passHref>
+            <a target='_blank'>
+              <Image
+                src='./images/Dashgo.png'
+                alt='Page DashGo'
+                borderRadius='10'
+              />
+            </a>
+          </Link>
+
+          <Text pt={1} fontSize={['xs', 'sm', 'sm', 'sm', 'md']}>
+            {t('dash_go_caption')}
+          </Text>
+        </Box>
       </SimpleGrid>
     </>
   )
