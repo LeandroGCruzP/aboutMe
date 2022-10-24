@@ -1,7 +1,6 @@
 import { HStack } from '@chakra-ui/react'
 import { useTranslation } from 'next-i18next'
 import { Components } from './components'
-import { styles } from './styles'
 
 interface LinksProps {
   label: string
@@ -18,7 +17,16 @@ export function Header() {
   const { t } = useTranslation('header')
 
   return (
-    <HStack {...styles.container}>
+    <HStack
+      w='100%'
+      h='50px'
+      justify='flex-end'
+      spacing={[4, 4, 4, 6, 8]}
+      fontSize={['sm', 'md', 'md', 'md', 'lg']}
+      fontWeight='medium'
+      color='#D7CCC8'
+      pr='10px'
+    >
       {links.map((link, i) =>
         <Components.ActiveLink key={i} url={link.url} label={t(link.label)} />
       )}

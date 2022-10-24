@@ -1,7 +1,6 @@
 import { Flex } from '@chakra-ui/react'
 import { Icons } from '~/assets'
 import { Components } from './components'
-import { styles } from './styles'
 
 const urlLinkedin = 'https://www.linkedin.com/in/leandrogcruzp/'
 const urlGithub = 'https://github.com/LeandroGCruzP'
@@ -11,10 +10,10 @@ const urlAPIWhatsapp = `https://api.whatsapp.com/send?phone=${phone}`
 
 export function Sidebar() {
   return (
-    <Flex {...styles.container}>
+    <Flex h='100%' w='40px' flexDir='column' justify='space-between' >
       <Components.Logo url='/' />
 
-      <Flex {...styles.wrapper}>
+      <Flex gap='5' flexDir='column' align='center' >
         <Components.SocialMedia label='Linkedin' url={urlLinkedin}>
           <Icons.Linkedin size={22} cursor='pointer' color='#D7CCC8' />
         </Components.SocialMedia>
@@ -31,7 +30,7 @@ export function Sidebar() {
           <Icons.Whatsapp size={20} cursor='pointer' color='#D7CCC8' />
         </Components.SocialMedia>
 
-        <Flex {...styles.lineVertical} />
+        <Flex h='100px' w='3px' bg='#FF0000' />
       </Flex>
     </Flex>
   )
