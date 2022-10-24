@@ -137,7 +137,7 @@ export const getStaticProps: GetStaticProps = async ctx => {
 
   return {
     props: {
-      ...(await serverSideTranslations(String(locale), ['home', 'header']))
+      ...(await serverSideTranslations(String(locale), ['home', 'header', 'searcher']))
     }
   }
 }

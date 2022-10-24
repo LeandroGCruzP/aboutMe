@@ -79,7 +79,7 @@ export default function About() {
 export const getStaticProps: GetStaticProps = async ctx => {
   return {
     props: {
-      ...(await serverSideTranslations(String(ctx.locale), ['about', 'header']))
+      ...(await serverSideTranslations(String(ctx.locale), ['about', 'header', 'searcher']))
     }
   }
 }

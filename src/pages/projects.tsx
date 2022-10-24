@@ -125,7 +125,7 @@ export default function Projects() {
 export const getStaticProps: GetStaticProps = async ctx => {
   return {
     props: {
-      ...(await serverSideTranslations(String(ctx.locale), ['projects', 'header']))
+      ...(await serverSideTranslations(String(ctx.locale), ['projects', 'header', 'searcher']))
     }
   }
 }
