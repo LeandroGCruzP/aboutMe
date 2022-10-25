@@ -119,8 +119,25 @@ export default function Home() {
                 fontSize={['xs', 'sm', 'sm', 'sm', 'md']}
                 fontWeight='medium'
               >
-                {t('action_press')} <Kbd bg='#1C1C1C'>ctrl</Kbd> +{' '}
-                <Kbd bg='#1C1C1C'>k</Kbd> {t('action_to_navigate')}
+                {t('action_press')} {' '}
+                <Kbd
+                  border={0}
+                  color='gray.700'
+                  fontSize={['xs', 'sm', 'sm', 'sm', 'md']}
+                  fontWeight='bold'
+                >
+                  ctrl
+                </Kbd>
+                {' '}+{' '}
+                <Kbd
+                  border={0}
+                  color='gray.700'
+                  fontSize={['xs', 'sm', 'sm', 'sm', 'md']}
+                  fontWeight='bold'
+                >
+                  k
+                </Kbd>{' '}
+                {t('action_to_navigate')}
               </Text>
 
               <Icons.Rocket fontSize={15} />
