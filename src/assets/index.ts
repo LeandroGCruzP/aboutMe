@@ -2,6 +2,7 @@ import { BsWhatsapp } from 'react-icons/bs'
 import { FiCommand, FiGithub, FiLinkedin } from 'react-icons/fi'
 import { GrInstagram } from 'react-icons/gr'
 import { IoLogoNodejs, IoRocketSharp } from 'react-icons/io5'
+import { MdOutlinePersonalVideo } from 'react-icons/md'
 import { RiArrowDownSLine } from 'react-icons/ri'
 import { SiCss3, SiGit, SiHtml5, SiJavascript, SiLinux, SiNextdotjs, SiReact, SiTypescript } from 'react-icons/si'
 
@@ -22,4 +23,5 @@ export const Icons = {
   NodeJS: IoLogoNodejs,
   Linux: SiLinux,
   Git: SiGit,
+  Page: MdOutlinePersonalVideo,
 }

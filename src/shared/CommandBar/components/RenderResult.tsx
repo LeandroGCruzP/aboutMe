@@ -8,16 +8,19 @@ export function RenderResult() {
     <KBarResults
       items={results}
       onRender={({ item, active }) => {
-        console.log(item, active)
-
         return (
-          typeof item === 'string'
-          ? (
-            <Text fontSize={['xs', 'sm', 'sm', 'sm', 'md']} fontWeight='medium'>
-              {item}
-            </Text>
-          )
-          : (
+          typeof item === 'string' ?
+          (
+            <Flex
+              fontSize={['xs', 'sm', 'sm', 'sm', 'md']}
+              fontWeight='medium'
+              bg='#1C1C1C'
+              color= '#7e7e7e'
+              px='12px'
+            >
+              <Text>{item}</Text>
+            </Flex>
+          ) : (
             <Flex
               align='center'
               bg={active ? '#222222' : '#1C1C1C'}
@@ -29,16 +32,27 @@ export function RenderResult() {
               borderRadius={item.id === 'projects' ? '0 0 10px 10px' : 0}
               justify='space-between'
             >
-              <Text>{item.name}</Text>
-              {item.id === 'home' &&
-                <Kbd bg='#1C1C1C' borderRadius={999}>H</Kbd>
-              }
-              {item.id === 'about' &&
-                <Kbd bg='#1C1C1C' borderRadius={999}>A</Kbd>
-              }
-              {item.id === 'projects' &&
-                <Kbd bg='#1C1C1C' borderRadius={999}>P</Kbd>
-              }
+              <Flex gap={2}>
+                {item.icon}
+                <Text>{item.name}</Text>
+              </Flex>
+
+              <Flex
+                bg='#383838'
+                borderRadius={3}
+                w='25px'
+                h='25px'
+                align='center'
+                justify='center'
+              >
+                <Kbd
+                  fontSize={['xs', 'sm', 'sm', 'sm', 'md']}
+                  fontWeight='bold'
+                  border={0}
+                >
+                  {String(item.shortcut).toUpperCase()}
+                </Kbd>
+              </Flex>
             </Flex>
           )
         )

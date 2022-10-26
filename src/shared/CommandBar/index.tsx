@@ -2,6 +2,7 @@ import { Flex, Input } from '@chakra-ui/react'
 import { KBarAnimator, KBarPortal, KBarPositioner, KBarProvider, KBarSearch } from 'kbar'
 import { useTranslation } from 'next-i18next'
 import { useRouter } from 'next/router'
+import { Icons } from '~/assets'
 import { Components } from './components'
 
 interface CommandBarProps {
@@ -18,21 +19,63 @@ export function CommandBar({ children }: CommandBarProps) {
       name: 'Home',
       shortcut: ['h'],
       keywords: 'home',
-      perform: () => router.push('/')
+      section: 'Pages',
+      perform: () => router.push('/'),
+      icon: <Icons.Page fontSize={20} />,
     },
     {
       id: 'about',
       name: 'About',
       shortcut: ['a'],
       keywords: 'about',
-      perform: () => router.push('/about')
+      section: 'Pages',
+      perform: () => router.push('/about'),
+      icon: <Icons.Page fontSize={20} />,
     },
     {
       id: 'projects',
       name: 'Projects',
       shortcut: ['p'],
       keywords: 'projects',
-      perform: () => router.push('/projects')
+      section: 'Pages',
+      perform: () => router.push('/projects'),
+      icon: <Icons.Page fontSize={20} />,
+    },
+    {
+      id: 'linkedin',
+      name: 'Linkedin',
+      shortcut: ['l'],
+      keywords: 'linkedin',
+      section: 'Links',
+      perform: () => window.open('https://www.linkedin.com/in/leandrogcruzp/', '_blank'),
+      icon: <Icons.Linkedin fontSize={20} />,
+    },
+    {
+      id: 'github',
+      name: 'Github',
+      shortcut: ['g'],
+      keywords: 'github',
+      section: 'Links',
+      perform: () => window.open('https://github.com/LeandroGCruzP', '_blank'),
+      icon: <Icons.Github fontSize={20} />,
+    },
+    {
+      id: 'instagram',
+      name: 'Instagram',
+      shortcut: ['i'],
+      keywords: 'instagram',
+      section: 'Links',
+      perform: () => window.open('https://www.instagram.com/leh_gcruz/', '_blank'),
+      icon: <Icons.Instagram fontSize={20} />,
+    },
+    {
+      id: 'whatsapp',
+      name: 'Whatsapp',
+      shortcut: ['w'],
+      keywords: 'whatsapp',
+      section: 'Links',
+      perform: () => window.open('https://api.whatsapp.com/send?phone=5542998256197', '_blank'),
+      icon: <Icons.Whatsapp fontSize={20} />,
     },
   ]
 
