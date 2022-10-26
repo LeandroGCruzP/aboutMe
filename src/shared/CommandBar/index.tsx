@@ -74,7 +74,7 @@ export function CommandBar({ children }: CommandBarProps) {
       shortcut: ['w'],
       keywords: 'whatsapp',
       section: 'Links',
-      perform: () => window.open('https://api.whatsapp.com/send?phone=5542998256197', '_blank'),
+      perform: () => window.open('https://api.whatsapp.com/send?phone=5542998256197&text=Hi%20Leandro!%20Nice%20to%20meet%20you', '_blank'),
       icon: <Icons.Whatsapp fontSize={20} />,
     },
   ]

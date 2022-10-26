@@ -5,8 +5,9 @@ import { Components } from './components'
 const urlLinkedin = 'https://www.linkedin.com/in/leandrogcruzp/'
 const urlGithub = 'https://github.com/LeandroGCruzP'
 const urlInstagram = 'https://www.instagram.com/leh_gcruz/'
-const phone = '+5542998256197'
-const urlAPIWhatsapp = `https://api.whatsapp.com/send?phone=${phone}`
+const phone = '5542998256197'
+const message = 'Hi Leandro! Nice to meet you'
+const urlAPIWhatsapp = `https://api.whatsapp.com/send?phone=${phone}&text=${message}`
 
 export function Sidebar() {
   return (
