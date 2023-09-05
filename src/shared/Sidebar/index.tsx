@@ -2,7 +2,7 @@ import { Flex } from '@chakra-ui/react'
 import { Icons } from '~/assets'
 import { Components } from './components'
 
-const urlLinkedin = 'https://www.linkedin.com/in/leandrogcruzp/'
+const urlLinkedin = 'https://www.linkedin.com/in/lehcruz/'
 const urlGithub = 'https://github.com/LeandroGCruzP'
 const urlInstagram = 'https://www.instagram.com/leh_gcruz/'
 const phone = '5542998256197'

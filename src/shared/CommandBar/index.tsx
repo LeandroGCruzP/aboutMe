@@ -47,7 +47,7 @@ export function CommandBar({ children }: CommandBarProps) {
       shortcut: ['l'],
       keywords: 'linkedin',
       section: 'Links',
-      perform: () => window.open('https://www.linkedin.com/in/leandrogcruzp/', '_blank'),
+      perform: () => window.open('https://www.linkedin.com/in/lehcruz/', '_blank'),
       icon: <Icons.Linkedin fontSize={20} />,
     },
     {
