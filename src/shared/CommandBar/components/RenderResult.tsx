@@ -49,6 +49,7 @@ export function RenderResult() {
                   fontSize={['xs', 'sm', 'sm', 'sm', 'md']}
                   fontWeight='bold'
                   border={0}
+                  color={'#000000'}
                 >
                   {String(item.shortcut).toUpperCase()}
                 </Kbd>
