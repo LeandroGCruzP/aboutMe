@@ -126,7 +126,7 @@ export default function Home() {
                   fontSize={['xs', 'sm', 'sm', 'sm', 'md']}
                   fontWeight='bold'
                 >
-                  ctrl
+                  cmd
                 </Kbd>
                 {' '}+{' '}
                 <Kbd
