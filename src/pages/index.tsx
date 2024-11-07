@@ -40,8 +40,8 @@ export default function Home() {
           {isPhoneVersion ? (
             <Image
               alt={t('alt_image')}
-              src='/profileLeandro.png'
-              height='400px'
+              src='/profileLeandro2.png'
+              height='450px'
               width='274.82px'
               layout='fixed'
               priority
@@ -49,17 +49,17 @@ export default function Home() {
           ) : isTabletVersion ? (
             <Image
               alt={t('alt_image')}
-              src='/profileLeandro.png'
-              height='600px'
-              width='400px'
+              src='/profileLeandro2.png'
+              height='700px'
+              width='420px'
               layout='fixed'
               priority
             />
           ) : (
             <Image
               alt={t('alt_image')}
-              src='/profileLeandro.png'
-              height='700px'
+              src='/profileLeandro2.png'
+              height='800px'
               width='480.94px'
               layout='fixed'
               priority
